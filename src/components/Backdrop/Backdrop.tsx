@@ -1,11 +1,21 @@
 import React from 'react';
 
-const Backdrop = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+interface Props {
+  show: boolean;
+  onClick: React.MouseEventHandler;
+}
+
+const Backdrop: React.FC<Props> = ({ show, onClick }) => {
+  return (
+    <div
+      className="modal-backdrop show"
+      style={{ display: show ? 'block' : 'none' }}
+      onClick={onClick}
+    />
+  );
 };
 
 export default Backdrop;
+
+
+
