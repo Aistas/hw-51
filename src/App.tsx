@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from './components/Modal/Modal';
 import Alert from './components/Alert/Alert';
+import Navbar from './components/Navbar/Navbar.tsx';
 
 const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -18,8 +19,14 @@ const App: React.FC = () => {
     setAlerts((prevAlerts) => prevAlerts.filter(alert => alert.id !== id));
   };
 
+
+
+
+
   return (
     <div className="container mt-5">
+      <Navbar/>
+
       <button className="btn btn-primary" onClick={openModal}>Open Modal</button>
 
       <div className="mt-3">
